@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !gallery css */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 5px;
+    margin: 0 10px;
+}
+
+img{
+    width: 100%;
+    height: 300px;
+}
+section{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    z-index: 200;
+    display: grid; 
+    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-rows: 1fr 4fr 1fr ;
+    color:white;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.overlay .pre-btn{
+    grid-row: 2/3;
+    grid-column: 1/2; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.overlay .nxt-btn{
+    grid-row: 2/3;
+    grid-column: 3/4; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .close-btn{
+    grid-row: 1/2;
+    grid-column: 3/4; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+}
+.overlay .counter{
+    grid-row: 3/4;
+    grid-column: 2/3; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.overlay .container{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    justify-content: stretch;
+    overflow: hidden;
+}
+
+.overlay .container img{
+    height: 100%;
+    width: 100%;
+}
